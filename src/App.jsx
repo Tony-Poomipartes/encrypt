@@ -3,12 +3,12 @@
 // import jwt_decode from "jwt-decode";
 
 // // == Import page
-// import "./styles/_reset.css"
+import "./styles/_reset.css"
 // import "./App.css";
-// import AppHeader from "./components/AppHeader";
-// import AppFooter from "./components/AppFooter";
+import AppHeader from "./components/AppHeader";
+import AppFooter from "./components/AppFooter";
 
-// import Homepage from "./pages/HomePage";
+import Homepage from "./pages/HomePage";
 // import Signup from "./pages/SignUp/SignUp";
 // import Recipe from "./pages/Recipe";
 // import SignIn from "./pages/SignIn";
@@ -26,7 +26,7 @@
 
 
 // // == Composant
-// const App = () => {
+const App = () => {
 //   const [isLogged, setIsLogged] = useState(false);
 //   useEffect(() => {
 //     let token = getToken()
@@ -37,29 +37,29 @@
 //     }
 //   }, [])
 //   console.log(isLogged, "isLoggedFromHome? ")
-//   return (
-//     <>
-//       <Router>
-//         <AppHeader isLogged={isLogged} setIsLogged={setIsLogged} />
+  return (
+    <>
+      <Router>
+        <AppHeader/>
 
-//         <Routes>
-//           <Route path="/" element={<Homepage />} />
-//           <Route path="/signup" element={<Signup />} />
-//           <Route path="/recipes/:id" element={<Recipe />} />
-//           <Route path="/profile" element={<Profile setIsLogged={setIsLogged}/>} />
-//           <Route path="/signin" element={<SignIn setIsLogged={setIsLogged} />} />
-//           <Route path="/recipes/create" element={<CreateRecipe />} />
-//           <Route path="/*" element={<Error />} />
-//           <Route path="/recipes" element={<AllRecipes />} />
-//           <Route path="/CGU" element={<CGU />} />
-//           <Route path="/recipes/update/:id" element={<UpdateRecipe />} />
-//         </Routes>
-//         <AppFooter />
-//       </Router>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          {/* <Route path="/signup" element={<Signup />} />
+          <Route path="/recipes/:id" element={<Recipe />} />
+          <Route path="/profile" element={<Profile setIsLogged={setIsLogged}/>} />
+          <Route path="/signin" element={<SignIn setIsLogged={setIsLogged} />} />
+          <Route path="/recipes/create" element={<CreateRecipe />} />
+          <Route path="/*" element={<Error />} />
+          <Route path="/recipes" element={<AllRecipes />} />
+          <Route path="/CGU" element={<CGU />} />
+          <Route path="/recipes/update/:id" element={<UpdateRecipe />} /> */}
+        </Routes>
+        <AppFooter />
+      </Router>
 
-//     </>
-//   );
-// };
+    </>
+  );
+};
 
 // == Export
 export default App;

@@ -1,7 +1,7 @@
 export function Description (){
   return(
-    <div>
-      <p>crypté vos mots de passe avec le chiffrement de César ou le chiffre de Vernam</p>
+    <div id="description">
+      <p>crypté vos mots de passes avec le chiffrement de César ou le chiffre de Vernam( ou masque jetable)</p>
     </div>
   );
 }

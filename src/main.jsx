@@ -7,12 +7,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
-// function App() {
-//   return (
-//     <div>
-//       {/* Contenu de mon application */}
-//     </div>
-//   );
-// }
-
-// ReactDOM.render(<App />, document.getElementById('root'));

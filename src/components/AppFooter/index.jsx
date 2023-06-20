@@ -2,11 +2,11 @@
 import { NavLink, Link } from "react-router-dom";
 
 // import css
-import "./style.scss";
+// import "./style.scss";
 
 function AppFooter() {
   return (
-    <footer>
+    <footer style= {{ border: "2px solid blue"}}>
 
       <ul>
         <li className="cgu">

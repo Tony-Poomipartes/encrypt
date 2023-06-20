@@ -1,3 +1,25 @@
+import { Description } from "../components/description";
+
+
+
+function HomePage  (){
+  return (
+    <>
+      <div style= {{ border: "2px solid red"}}>
+        <h1>bonjour!</h1>
+        <p>ca marche !</p>
+      </div>
+      <Description/>
+    </>
+  );
+}
+export default HomePage; 
+
+
+
+
+
+
 // import SearchBar from "../components/SearchBar";
 // import { Link } from "react-router-dom";
 // import { Card, Image, Rating } from "semantic-ui-react";

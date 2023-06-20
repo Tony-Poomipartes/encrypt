@@ -3,8 +3,8 @@
 // import jwt_decode from "jwt-decode";
 
 // // == Import page
-import "./styles/_reset.css"
-// import "./App.css";
+import "./styles/_reset.css";
+import "./styles/global.css";
 import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";
 
@@ -20,7 +20,7 @@ import Homepage from "./pages/HomePage";
 // import CGU from "./pages/CGU";
 
 // // Import React
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import SearchBar from "./components/SearchBar";
 
 

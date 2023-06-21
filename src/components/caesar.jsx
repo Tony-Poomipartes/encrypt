@@ -39,25 +39,47 @@ function CaesarCipher() {
   };
 
   return (
-    <div>
+    <div id="ceasar">
       <form onSubmit={handleSubmit}>
-        <label>
-          Mot de passe :
-          <input
-            type="text"
-            value={password}
-            onChange={handlePasswordChange}
-          />
+        <input
+          type="text"
+          name="password"
+          class="question" 
+          id="pwd"
+          required autocomplete="off"
+          value={password}
+          onChange={handlePasswordChange}
+        />
+        <label for="pwd">
+          <span>
+            Votre mot de passe
+          </span>
         </label>
-        <label>
-          Chiffre :
-          <input type="number" value={shift} onChange={handleShiftChange} />
+
+          <input 
+          type="number" 
+          name="key number"
+          class="question" 
+          id="nbr"
+          required autocomplete="off"
+          value={shift} 
+          onChange={handleShiftChange} />
+        <label for="nbr">
+        <span>votre clef de chiffrement</span>
         </label>
         <button type="submit">Chiffrer</button>
       </form>
       {encryptedPassword && (
-        <p>Résultat du chiffrement : {encryptedPassword}</p>
-      )}
+  <label htmlFor="encryptedText">Résultat du chiffrement :</label>
+)}
+      <input
+          type="text"
+          id="encryptedText"
+          name="encrypted Password"
+          class="question"
+          value={encryptedPassword}
+          readOnly
+        />
     </div>
   );
 }

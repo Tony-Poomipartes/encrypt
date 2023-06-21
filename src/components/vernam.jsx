@@ -31,30 +31,43 @@ const VernamCipher = () => {
   return (
     <div>
       <div>
-        <label htmlFor="password">Mot de passe :</label>
         <input
           type="text"
+          class="question" 
           id="password"
+          required autocomplete="off"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+                <label for="pwd">
+          <span>
+            Votre mot de passe
+          </span>
+        </label>
       </div>
       <div>
-        <label htmlFor="key">Clé de chiffrement :</label>
         <input
           type="text"
           id="key"
+          class="question"
+          required autocomplete="off" 
           value={key}
           onChange={(e) => setKey(e.target.value)}
         />
+        <label for="nbr">
+        <span>votre clef de chiffrement</span>
+        </label>
       </div>
       <button onClick={handleEncryptClick}>Chiffrer</button>
       <div>
-        <label htmlFor="encryptedText">Texte chiffré :</label>
+      {encryptedText && (
+  <label htmlFor="encryptedText">Résultat du chiffrement :</label>
+)}
         <input
           type="text"
           id="encryptedText"
-          value={encryptedText}
+          class="question"
+          value={ encryptedText}
           readOnly
         />
       </div>

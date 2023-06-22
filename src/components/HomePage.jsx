@@ -1,6 +1,7 @@
 import { Description } from "./description";
 import {CaesarCipher} from "./caesar";
 import VernamCipher from "./vernam";
+import PasswordGenerator from "./generator";
 import "../styles/homepage.css"
 
 
@@ -24,6 +25,7 @@ function HomePage  (){
         </ul>
         <br />
         <VernamCipher/>
+        <PasswordGenerator/>
       </div>
     </>
   );

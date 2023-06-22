@@ -44,7 +44,7 @@ function CaesarCipher() {
         <input
           type="text"
           name="password"
-          class="question" 
+          className="question" 
           id="pwd"
           required autocomplete="off"
           value={password}
@@ -59,7 +59,7 @@ function CaesarCipher() {
           <input 
           type="number" 
           name="key number"
-          class="question" 
+          className="question" 
           id="nbr"
           required autocomplete="off"
           value={shift} 
@@ -76,7 +76,7 @@ function CaesarCipher() {
           type="text"
           id="encryptedText"
           name="encrypted Password"
-          class="question"
+          className="question"
           value={encryptedPassword}
           readOnly
         />

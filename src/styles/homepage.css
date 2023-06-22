@@ -60,7 +60,105 @@ button:hover {
   box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
   transition-duration: 0.5s;
 }
+/*? ----------------------input range--------------------- */
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 60%;
+  background-color: #00000000;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 80%;
+  height: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: var(--gradient-accent-orange);
+  border-radius: 25px;
+  border: 0px solid #000101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: var(--shadow-md);
+  border: 1px solid #000000;
+  height: 20px;
+  width: 39px;
+  border-radius: 7px;
+  background: #65001c;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.6px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--gradient-accent-orange);
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 12.8px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #ac51b5;
+  border-radius: 25px;
+  border: 0px solid #000101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 39px;
+  border-radius: 7px;
+  background: #65001c;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 12.8px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 39px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #ac51b5;
+  border: 0px solid #000101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #ac51b5;
+  border: 0px solid #000101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 39px;
+  border-radius: 7px;
+  background: #65001c;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #ac51b5;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #ac51b5;
+}
 
+input[type=range]::-webkit-slider-thumb,
+input[type=range]::-moz-range-thumb,
+input[type=range]::-ms-thumb {
+  /* ... */
+  transition: all 0.1s ease; /* Adding a smooth transition */
+  /* ... */
+}
+
+/*? ----------------------input--------------------- */
 input,
 span,
 label,
@@ -86,9 +184,12 @@ textarea.question {
   margin: 0;
   border: none;
   width: 80%;
+  height: 100px;
+  resize: vertical;
   background: rgba(0, 0, 0, 0);
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
   overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+  overflow: hidden; 
 }
 
 input.question + label,
@@ -184,6 +285,53 @@ input.question:valid ~ input[type="submit"], textarea.question:valid ~ input[typ
 input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input[type="submit"] {
   display: none;
 }
+
+/*? ----------------------checkbox--------------------- */
+.checkbox-wrapper-47 input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-47 label {
+  position: relative;
+  padding-left: 2em;
+  padding-right: 1em;
+  line-height: 2;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.checkbox-wrapper-47 label:before {
+  box-sizing: border-box;
+  content: " ";
+  position: absolute;
+  top: 0.3em;
+  left: 0;
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+  border: 2px solid #9098A9;
+  border-radius: 6px;
+  z-index: -1;
+}
+
+.checkbox-wrapper-47 input[type=checkbox]:checked + label {
+  padding-left: 1em;
+  color: #2c047b;
+}
+.checkbox-wrapper-47 input[type=checkbox]:checked + label:before {
+  top: 0;
+  width: 100%;
+  height: 2em;
+  background: #d9b7e6ed;
+  border-color: #a639e1;
+}
+
+.checkbox-wrapper-47 label,
+.checkbox-wrapper-47 label::before {
+  transition: 0.25s all ease;
+}
+
 
 @-webkit-keyframes appear {
   100% {

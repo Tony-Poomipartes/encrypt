@@ -101,6 +101,8 @@
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
 	--gradient-accent-orange: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
 	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
+  --gradient-blue: : linear-gradient(82deg, rgba(253,187,45,1) 0%, rgba(0,252,255,1) 100%);
+
 
 	--shadow-sm: 0px 6px 3px rgba(255, 255, 255, 0.01), 0px 4px 2px rgba(255, 255, 255, 0.01),
 		0px 2px 2px rgba(255, 255, 255, 0.02), 0px 0px 1px rgba(255, 255, 255, 0.03);

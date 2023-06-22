@@ -1,4 +1,4 @@
-import { Description } from "./description";
+import { Description } from "./Description";
 import {CaesarCipher} from "./caesar";
 import VernamCipher from "./vernam";
 import PasswordGenerator from "./generator";

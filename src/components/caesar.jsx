@@ -46,11 +46,11 @@ function CaesarCipher() {
           name="password"
           className="question" 
           id="pwd"
-          required autocomplete="off"
+          required autoComplete ="off"
           value={password}
           onChange={handlePasswordChange}
         />
-        <label for="pwd">
+        <label htmlFor="pwd">
           <span>
             Votre mot de passe
           </span>
@@ -61,10 +61,10 @@ function CaesarCipher() {
           name="key number"
           className="question" 
           id="nbr"
-          required autocomplete="off"
+          required autoComplete ="off"
           value={shift} 
           onChange={handleShiftChange} />
-        <label for="nbr">
+        <label htmlFor="nbr">
         <span>votre clef de chiffrement</span>
         </label>
         <button type="submit">Chiffrer</button>

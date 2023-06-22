@@ -3,6 +3,7 @@ import { encryptPassword } from "../components/caesar";
 
 const handleEncrypt = (password, key) => {
   if (password.length !== key.length) {
+    console.log("Erreur : la longueur du mot de passe et de la clé doit être identique");
     return "Erreur : la longueur du mot de passe et de la clé doit être identique";
   }
 
@@ -55,13 +56,13 @@ const VernamCipher = () => {
       <div>
         <input
           type="text"
-          class="question" 
+          className="question" 
           id="password"
-          required autocomplete="off"
+          required autoComplete="off"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-                <label for="pwd">
+        <label htmlFor="password">
           <span>
             Votre mot de passe
           </span>
@@ -71,12 +72,12 @@ const VernamCipher = () => {
         <input
           type="text"
           id="key"
-          class="question"
-          required autocomplete="off" 
+          className="question"
+          required autoComplete="off" 
           value={key}
           onChange={(e) => setKey(e.target.value)}
         />
-        <label for="nbr">
+        <label htmlFor="key">
         <span>votre clef de chiffrement</span>
         </label>
       </div>
@@ -89,14 +90,15 @@ const VernamCipher = () => {
         <textarea
           type="text"
           id="encryptedText"
-          class="question"
+          className="question"
           value={ encryptedText }
           readOnly
         ></textarea>
-                <textarea
+          <label htmlFor="encryptedText">Résultat du déchiffrement :</label>
+        <textarea
           type="text"
-          id="encryptedText"
-          class="question"
+          id="decryptedText"
+          className="question"
           value={ decryptedText}
           readOnly
         ></textarea>

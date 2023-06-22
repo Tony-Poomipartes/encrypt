@@ -83,7 +83,7 @@ const PasswordGenerator = () => {
         />
         <span>{passwordLength}</span>
       </div>
-      <div class="checkbox-wrapper-47">
+      <div className="checkbox-wrapper-47">
         
         <input
           type="checkbox"
@@ -93,9 +93,9 @@ const PasswordGenerator = () => {
           onChange={handleOptionChange}
         />
         
-        <label for="cb-46">Include Lowercase Letters</label>
+        <label htmlFor="cb-46">Include Lowercase Letters</label>
     </div>
-      <div class="checkbox-wrapper-47">
+      <div className="checkbox-wrapper-47">
         
           <input
             type="checkbox"
@@ -105,9 +105,9 @@ const PasswordGenerator = () => {
             onChange={handleOptionChange}
           />
           
-          <label for="cb-47">Include Uppercase Letters</label>
+          <label htmlFor="cb-47">Include Uppercase Letters</label>
       </div>
-      <div class="checkbox-wrapper-47">
+      <div className="checkbox-wrapper-47">
           <input
             type="checkbox"
             id="cb-48"
@@ -115,9 +115,9 @@ const PasswordGenerator = () => {
             checked={includeNumbers}
             onChange={handleOptionChange}
           />
-          <label for="cb-48">Include Numbers</label>
+          <label htmlFor="cb-48">Include Numbers</label>
       </div>
-      <div class="checkbox-wrapper-47">
+      <div className="checkbox-wrapper-47">
           <input
             type="checkbox"
             id="cb-49"
@@ -125,7 +125,7 @@ const PasswordGenerator = () => {
             checked={includeSymbols}
             onChange={handleOptionChange}
           />
-          <label for="cb-49">Include Symbols</label>
+          <label htmlFor="cb-49">Include Symbols</label>
       </div>
       <button onClick={generatePassword}>Generate Password</button>
       {generatedPassword && (

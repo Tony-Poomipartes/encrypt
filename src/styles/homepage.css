@@ -32,7 +32,7 @@ h3{
 }
 
 
-
+/*? ----------------------button--------------------- */
 button {
   background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
   border-radius: 8px;
@@ -67,9 +67,11 @@ input[type=range] {
   width: 60%;
   background-color: #00000000;
 }
+
 input[type=range]:focus {
   outline: none;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
   width: 80%;
   height: 14px;
@@ -79,6 +81,7 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 25px;
   border: 0px solid #000101;
 }
+
 input[type=range]::-webkit-slider-thumb {
   box-shadow: var(--shadow-md);
   border: 1px solid #000000;
@@ -90,6 +93,11 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -3.6px;
 }
+
+.theme-dark input[type=range]::-webkit-slider-thumb {
+  box-shadow: var(--shadow-dark-sm);
+}
+
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: var(--gradient-accent-orange);
 }

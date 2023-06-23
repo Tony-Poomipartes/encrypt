@@ -52,6 +52,15 @@
 	--shadow-lg: 0px 62px 25px rgba(9, 11, 17, 0.01), 0px 35px 21px rgba(9, 11, 17, 0.05),
 		0px 16px 16px rgba(9, 11, 17, 0.1), 0px 4px 9px rgba(9, 11, 17, 0.12);
 
+	/* Shadows dark theme */
+
+	--shadow-dark-sm: 0px 4px 2px rgb(40 46 119 / 89%), 0px 3px 2px rgba(148, 147, 216, 0.89), 0px 2px 2px rgba(154, 157, 205, 0.542), 0px 0px 1px rgba(148, 170, 235, 0.815);;
+	--shadow-dark-md: 0px 28px 11px rgba(228, 228, 228, 0.887), 0px 16px 10px rgba(148, 170, 235, 0.815),
+		0px 7px 7px rgba(228, 228, 228, 0.887), 0px 2px 4px rgba(148, 170, 235, 0.815);
+	--shadow-dark-lg: 0px 62px 25px rgba(228, 228, 228, 0.887), 0px 35px 21px rgba(148, 170, 235, 0.815),
+		0px 16px 16px rgba(228, 228, 228, 0.887), 0px 4px 9px rgba(148, 170, 235, 0.815);
+
+
 	/* Text Sizes */
 	--text-sm: 0.875rem;
 	--text-base: 1rem;
@@ -157,6 +166,15 @@ background-image:var(--bg-image-main);
   background-size: cover;
     /* background-position: center top, center bottom; */
 } 
+
+.theme-dark{
+  background-image:var(--bg-image-main);
+    background-image:
+    url('src/assets/backgrounds/bg-main-dark-1440w.jpg');
+    color: var(--gray-0);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+  } 
 
 html,
 body {

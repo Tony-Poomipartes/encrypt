@@ -129,7 +129,7 @@ const PasswordGenerator = () => {
       </div>
       <button onClick={generatePassword}>Generate Password</button>
       {generatedPassword && (
-        <div>
+        <div id='generatedPassword'>
           <h4>Generated Password:</h4>
           <h5>{generatedPassword}</h5>
         </div>

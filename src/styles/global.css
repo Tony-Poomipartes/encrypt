@@ -52,6 +52,15 @@
 	--shadow-lg: 0px 62px 25px rgba(9, 11, 17, 0.01), 0px 35px 21px rgba(9, 11, 17, 0.05),
 		0px 16px 16px rgba(9, 11, 17, 0.1), 0px 4px 9px rgba(9, 11, 17, 0.12);
 
+	/* Shadows dark theme */
+
+	--shadow-dark-sm: 0px 4px 2px rgb(40 46 119 / 89%), 0px 3px 2px rgba(148, 147, 216, 0.89), 0px 2px 2px rgba(154, 157, 205, 0.542), 0px 0px 1px rgba(148, 170, 235, 0.815);;
+	--shadow-dark-md: 0px 28px 11px rgba(228, 228, 228, 0.887), 0px 16px 10px rgba(148, 170, 235, 0.815),
+		0px 7px 7px rgba(228, 228, 228, 0.887), 0px 2px 4px rgba(148, 170, 235, 0.815);
+	--shadow-dark-lg: 0px 62px 25px rgba(228, 228, 228, 0.887), 0px 35px 21px rgba(148, 170, 235, 0.815),
+		0px 16px 16px rgba(228, 228, 228, 0.887), 0px 4px 9px rgba(148, 170, 235, 0.815);
+
+
 	/* Text Sizes */
 	--text-sm: 0.875rem;
 	--text-base: 1rem;
@@ -155,8 +164,19 @@ background-image:var(--bg-image-main);
   url('../assets/backgrounds/bg-subtle-1-light-800w.jpg') ,;
   background-repeat: no-repeat, no-repeat;
   background-size: cover;
-    /* background-position: center top, center bottom; */
 } 
+
+.theme-dark{
+  background-image:var(--bg-image-main);
+    background-image:
+    url('src/assets/backgrounds/bg-main-dark-1440w.jpg');
+    color: var(--gray-0);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    padding-bottom: 1px;
+  } 
+
+
 
 html,
 body {
@@ -165,11 +185,11 @@ body {
 }
 
 body {
-	/* background-color: var(--gray-999); */
 	color: var(--gray-200);
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
+
 }
 
 *,
@@ -220,114 +240,31 @@ h5 {
 	font-size: var(--text-xl);
 }
 
-/* Utilities */
-
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border-width: 0;
-}
-
-.wrapper {
-	width: 100%;
-	max-width: 83rem;
-	margin-inline: auto;
-	padding-inline: 1.5rem;
-}
-
-.stack {
-	display: flex;
-	flex-direction: column;
-}
-
-.gap-2 {
-	gap: 0.5rem;
-}
-.gap-4 {
-	gap: 1rem;
-}
-.gap-8 {
-	gap: 2rem;
-}
-.gap-10 {
-	gap: 2.5rem;
-}
-.gap-15 {
-	gap: 3.75rem;
-}
-.gap-20 {
-	gap: 5rem;
-}
-.gap-30 {
-	gap: 7.5rem;
-}
-.gap-48 {
-	gap: 12rem;
-}
-
-/* @media (min-width: 50em) {
-	.lg\:gap-2 {
-		gap: 0.5rem;
-	}
-	.lg\:gap-4 {
-		gap: 1rem;
-	}
-	.lg\:gap-8 {
-		gap: 2rem;
-	}
-	.lg\:gap-10 {
-		gap: 2.5rem;
-	}
-	.lg\:gap-15 {
-		gap: 3.75rem;
-	}
-	.lg\:gap-20 {
-		gap: 5rem;
-	}
-	.lg\:gap-30 {
-		gap: 7.5rem;
-	}
-	.lg\:gap-48 {
-		gap: 12rem;
-	}
-  /* :root {
-    --bg-scale: 1;
-    --bg-image-main: url('../assets/backgrounds/bg-main-light-1440w.jpg');
+/*?=================================*/
+/*?           min-width: 20em
+/*?=================================*/
+@media (min-width: 20em) {
+  h1 {
+    font-size: var(--text-4xl);
   }
-  :root.theme-dark {
-    --bg-image-main: url('../assets/backgrounds/bg-main-dark-1440w.jpg');
-  } */
 
-  /* :root.loaded {
-    --bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-1440w.jpg');
-    --bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-1440w.jpg');
-    --bg-image-footer: url('/assets/backgrounds/bg-footer-light-1440w.jpg');
-  } */
-  /* :root.loaded.theme-dark {
-    --bg-image-subtle-1: url('../assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
-    --bg-image-subtle-2: url('../assets/backgrounds/bg-subtle-2-dark-1440w.jpg');
-    --bg-image-footer: url('../assets/backgrounds/bg-footer-dark-1440w.jpg');
-  } *//*
-} */
+  h2 {
+    font-size: var(--text-3xl);
+  }
+  
+  h3 {
+    font-size: var(--text-xl);
+  }
+  
+  h4 {
+    font-size: var(--text-xl);
+  }
+  
+  h5 {
+    font-size: var(--text-md);
+  }
+}
 
-/* .backgrounds {
-  min-height: 100%;
-  isolation: isolate;
-  background: */
-    /* noise url('../assets/backgrounds/noise.png') top center/220px repeat, */
-    /* footer var(--bg-image-footer) bottom center/var(--bg-gradient-size) no-repeat, */
-    /* header1 var(--bg-image-main-curves) top center/var(--bg-gradient-size) no-repeat, */
-    /* header2 var(--bg-image-main) top center/var(--bg-gradient-size) no-repeat,
-    /* base var(--gray-999);  */
-  /* background-blend-mode: /*noise overlay, footer var(--bg-blend-mode), */
-    /* header1 var(--bg-svg-blend-mode), /*header2 normal, base normal; */
-/* } */
 
 @media (forced-colors: active) {
   /* Deactivate custom backgrounds for high contrast users. */

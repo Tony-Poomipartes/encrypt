@@ -60,6 +60,16 @@ button:hover {
   box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
   transition-duration: 0.5s;
 }
+
+/*?=================================*/
+/*?           min-width: 20em
+/*?=================================*/
+@media (min-width: 20em) {
+  button {
+    width: auto;
+    height: auto;
+  }
+}
 /*? ----------------------input range--------------------- */
 input[type=range] {
   -webkit-appearance: none;
@@ -294,6 +304,24 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
   display: none;
 }
 
+/*?=================================*/
+/*?           min-width: 20em
+/*?=================================*/
+@media (min-width: 20em) {
+    input, span, label, textarea {
+      font-size: var(	--text-lg);
+  }
+  input.question, textarea.question {
+    width: auto;
+    height: auto;
+  }
+
+    input.question + label > span,
+  textarea.question + label > span {
+    font-size: var(--text-xl );
+  }
+}
+
 /*? ----------------------checkbox--------------------- */
 .checkbox-wrapper-47 input[type="checkbox"] {
   display: none;
@@ -338,6 +366,20 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 .checkbox-wrapper-47 label,
 .checkbox-wrapper-47 label::before {
   transition: 0.25s all ease;
+}
+
+/*?=================================*/
+/*?           min-width: 20em
+/*?=================================*/
+@media (min-width: 20em) {
+    #generatedPassword{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  #generatedPassword h5{
+    word-break: break-all;
+}
 }
 
 

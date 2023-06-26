@@ -94,7 +94,9 @@ const VernamCipher = () => {
           value={ encryptedText }
           readOnly
         ></textarea>
+        {decryptedText && (
           <label htmlFor="encryptedText">Résultat du déchiffrement :</label>
+          )}
         <textarea
           type="text"
           id="decryptedText"

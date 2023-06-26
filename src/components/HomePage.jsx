@@ -20,8 +20,8 @@ function HomePage  (){
         <p>Le chiffrement de Vernam, également connu sous le nom de chiffrement à flot, est une méthode de chiffrement qui utilise une clé secrète de la même longueur que le message à chiffrer. Il s'agit d'un chiffrement par combinaison bit à bit, où chaque bit du message est combiné avec le bit correspondant de la clé à l'aide d'une opération logique, généralement le XOR (OU exclusif).</p>
         <p>Mode d'emploi du chiffrement de Vernam :</p>
         <ul>
-          <li>creer une clé secrète de la même longueur que le message que vous souhaitez chiffrer.</li>
-          <li>ex: "toto" clef 3465  = wszt</li>
+          <li> <p>creer une clé secrète de la même longueur que le message que vous souhaitez chiffrer.</p> </li>
+          <li> <p>ex: "toto" clef 3465  = wszt</p> </li>
         </ul>
         <br />
         <VernamCipher/>

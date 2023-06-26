@@ -2,7 +2,7 @@
   padding: 1em;
   margin: 1em;
   border-radius: 25px;
-  background-color: #4f4f7a44;
+  background-color:#6f6c6c50;
   box-shadow: var(--shadow-md);
   font-size: var(--text-md);
   font-family: var(--font-body);
@@ -24,21 +24,44 @@ h3{
   overflow: hidden;
   padding: 0.1em; 
   margin: 0.2em; 
-  /* background: rgb(207,132,166); */
   background: var(--gradient-accent-orange);
   box-shadow: var(--shadow-md);
   white-space: nowrap;
 
 }
+/**====================================*/
+/**           theme dark
+/**====================================*/
+.theme-dark p,
+.theme-dark label{
+  color: var(	--gray-999);
+  }
 
 
+  .theme-dark input.question,
+  .theme-dark textarea.question{
+    color: var(	--gray-900);
+  }
+
+  .theme-dark input.question:focus + label > span,
+  .theme-dark input.question:valid + label > span {
+    color: var(--gray-600);
+  }
+
+  .theme-dark input.question + label > span,
+  textarea.question + label > span {
+    color: var(--gray-600);
+  }
+  .theme-dark h4, .theme-dark h5{
+    color: var(--gray-900);
+  }
 /*? ----------------------button--------------------- */
 button {
   background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: var(--gray-900);
   cursor: pointer;
   flex-shrink: 0;
   font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
@@ -52,6 +75,7 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  /* box-shadow: var(--shadow-lg); */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   transition: box-shadow 0.5s ease;
 }
@@ -116,8 +140,8 @@ input[type=range]::-moz-range-track {
   height: 12.8px;
   cursor: pointer;
   animate: 0.2s;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  background: #ac51b5;
+  /* box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; */
+  background: var(--accent-light);
   border-radius: 25px;
   border: 0px solid #000101;
 }
@@ -171,9 +195,7 @@ input[type=range]:focus::-ms-fill-upper {
 input[type=range]::-webkit-slider-thumb,
 input[type=range]::-moz-range-thumb,
 input[type=range]::-ms-thumb {
-  /* ... */
-  transition: all 0.1s ease; /* Adding a smooth transition */
-  /* ... */
+  transition: all 0.1s ease;
 }
 
 /*? ----------------------input--------------------- */
@@ -243,14 +265,16 @@ input.question:focus + label > span,
 input.question:valid + label > span {
   top: -100px;
   font-size: 22px;
-  color: #333;
+  z-index: 100;
+  color: var(--gray-400);
 }
+
 
 textarea.question:focus + label > span,
 textarea.question:valid + label > span {
   top: -150px;
   font-size: 22px;
-  color: #333;
+  color: var(--gray-100);
 }
 
 input.question:valid + label,
@@ -268,11 +292,10 @@ textarea.question + label > span {
   font-weight: 300;
   margin: 0;
   position: absolute;
-  color: #8F8F8F;
+  color: var(--gray-400);
   font-size: 48px;
   top: -66px;
   left: 0px;
-  z-index: -1;
   -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
   transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
 }
@@ -288,11 +311,11 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: #EEE;
+  background: var(--gray-900);
 }
 
 input[type="submit"]:active {
-  background: #999;
+  background: var(--gray-600);
 }
 
 input.question:valid ~ input[type="submit"], textarea.question:valid ~ input[type="submit"] {
@@ -337,7 +360,7 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
   display: inline-flex;
 }
 
-.checkbox-wrapper-47 label:before {
+.checkbox-wrapper-47 label::before {
   box-sizing: border-box;
   content: " ";
   position: absolute;
@@ -346,14 +369,15 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
   display: block;
   width: 1.4em;
   height: 1.4em;
-  border: 2px solid #9098A9;
+  border: 2px solid var(--gray-500);
   border-radius: 6px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .checkbox-wrapper-47 input[type=checkbox]:checked + label {
   padding-left: 1em;
   color: #2c047b;
+  z-index: 1;
 }
 .checkbox-wrapper-47 input[type=checkbox]:checked + label:before {
   top: 0;
@@ -361,6 +385,7 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
   height: 2em;
   background: #d9b7e6ed;
   border-color: #a639e1;
+  z-index: -1;
 }
 
 .checkbox-wrapper-47 label,

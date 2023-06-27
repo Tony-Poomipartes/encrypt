@@ -70,7 +70,6 @@ const PasswordGenerator = () => {
   };
   return (
     <div>
-      <h3>Password Generator</h3>
       <div>
         <label htmlFor="passwordLength">Password Length:</label>
         <input

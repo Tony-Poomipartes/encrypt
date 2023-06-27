@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
-import FloatingMenu from './FloatingMenu';
 
-const App = () => {
+const themeSwitch = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleThemeChange = () => {
@@ -12,12 +10,17 @@ const App = () => {
   };
 
   return (
-    <div className="app">
-      <h1>Mon application</h1>
-      <FloatingMenu onThemeChange={handleThemeChange} />
-      {/* Le reste du contenu de votre application */}
-    </div>
+    <div className="checkbox-wrapper-54">
+    <label className="switch">
+      <input
+        type="checkbox"
+        checked={isDarkMode}
+        onChange={handleThemeChange}
+      />
+      <span className="slider"></span>
+    </label>
+  </div>
   );
 };
 
-export default App;
+export default themeSwitch;

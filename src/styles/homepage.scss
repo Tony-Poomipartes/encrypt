@@ -410,12 +410,12 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 /*?           min-width: 20em
 /*?=================================*/
 @media (min-width: 20em) {
-    #generatedPassword{
+    .generatedPassword{
       display: flex;
       flex-direction: column;
       align-items: center;
   }
-  #generatedPassword h5{
+  .generatedPassword h5{
     word-break: break-all;
 }
 }

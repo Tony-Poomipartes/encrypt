@@ -7,7 +7,7 @@ import caesarIcon from "/var/www/html/spé React/S9/EP3/encrypt/src/assets/web i
 
 const FloatingMenu = () => {
   return (
-    <div id="menu">
+    <div className="menu">
       <input type="checkbox" id="menu-toggle" />
       <ul className="menu-items">
       <li className="menu-item">

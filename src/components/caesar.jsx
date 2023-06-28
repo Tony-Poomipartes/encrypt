@@ -5,17 +5,24 @@ function encryptPassword(password, shift) {
   for (let i = 0; i < password.length; i++) {
     const charCode = password.charCodeAt(i);
     let encryptedCharCode;
+
     if (charCode >= 65 && charCode <= 90) {
-      encryptedCharCode = ((charCode - 65 + shift) % 26) + 65; // Uppercase letters
+      // Lettre majuscule
+      encryptedCharCode = ((charCode - 65 + shift) % 26 + 26) % 26 + 65;
     } else if (charCode >= 97 && charCode <= 122) {
-      encryptedCharCode = ((charCode - 97 + shift) % 26) + 97; // Lowercase letters
+      // Lettre minuscule
+      encryptedCharCode = ((charCode - 97 + shift) % 26 + 26) % 26 + 97;
     } else if (charCode >= 48 && charCode <= 57) {
-      encryptedCharCode = ((charCode - 48 + shift) % 10) + 48; // Digits
+      // Chiffre
+      encryptedCharCode = ((charCode - 48 + shift) % 10 + 10) % 10 + 48;
     } else {
-      encryptedCharCode = charCode; // Non-alphabetic characters
+      // Symbole
+      encryptedCharCode = charCode;
     }
+
     encryptedChars.push(String.fromCharCode(encryptedCharCode));
   }
+
   return encryptedChars.join("");
 }
 

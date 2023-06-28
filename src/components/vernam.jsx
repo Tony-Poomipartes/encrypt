@@ -3,7 +3,6 @@ import { encryptPassword } from "../components/caesar";
 
 const handleEncrypt = (password, key) => {
   if (password.length !== key.length) {
-    console.log("Erreur : la longueur du mot de passe et de la clé doit être identique");
     return "Erreur : la longueur du mot de passe et de la clé doit être identique";
   }
 
@@ -20,7 +19,6 @@ const handleEncrypt = (password, key) => {
 
 const handleDecrypt = (encryptedPassword, key) => {
   if (encryptedPassword.length !== key.length) {
-    console.log("Erreur : la longueur du mot de passe chiffré et de la clé doit être identique");
     return "Erreur : la longueur du mot de passe chiffré et de la clé doit être identique";
   }
 
@@ -47,7 +45,7 @@ const VernamCipher = () => {
   };
 
   const handleDecryptClick = () => {
-    const decryptedText = handleDecrypt(encryptedText, key);
+    const decryptedText = handleDecrypt(password, key);
     setDecryptedText(decryptedText);
   };
 
@@ -78,33 +76,23 @@ const VernamCipher = () => {
           onChange={(e) => setKey(e.target.value)}
         />
         <label htmlFor="key">
-        <span>votre clef de chiffrement</span>
+        <span>Votre clef de chiffrement</span>
         </label>
       </div>
       <button onClick={handleEncryptClick}>Chiffrer</button>
       <button onClick={handleDecryptClick}>Déchiffrer</button>
-      <div>
       {encryptedText && (
-  <label htmlFor="encryptedText">Résultat du chiffrement :</label>
-)}
-        <textarea
-          type="text"
-          id="encryptedText"
-          className="question"
-          value={ encryptedText }
-          readOnly
-        ></textarea>
-        {decryptedText && (
-          <label htmlFor="encryptedText">Résultat du déchiffrement :</label>
-          )}
-        <textarea
-          type="text"
-          id="decryptedText"
-          className="question"
-          value={ decryptedText}
-          readOnly
-        ></textarea>
-      </div>
+        <div className='generatedPassword'>
+          <h4>Texte chiffré:</h4>
+          <h5>{encryptedText}</h5>
+        </div>
+      )}
+      {decryptedText && (
+        <div className='generatedPassword'>
+          <h4>Texte déchiffré:</h4>
+          <h5>{decryptedText}</h5>
+        </div>
+      )}
     </div>
   );
 };

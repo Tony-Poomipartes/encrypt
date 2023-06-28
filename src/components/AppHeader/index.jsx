@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './header.css';
+import './header.scss';
 
 const AppHeader = () => {
 

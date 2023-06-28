@@ -1,44 +1,28 @@
-import React, { useState } from 'react';
-import './FloatingMenu.css';
+import React from "react";
+import ThemeSwitch from "./themeSwitch";
+import "./FloatingMenu.scss";
+import vernamIcon from "/var/www/html/spé React/S9/EP3/encrypt/src/assets/web icons/vernam.png";
+import generatorIcon from "/var/www/html/spé React/S9/EP3/encrypt/src/assets/web icons/generator.png";
+import caesarIcon from "/var/www/html/spé React/S9/EP3/encrypt/src/assets/web icons/caesar.png";
 
-const FloatingMenu = ({ onThemeChange }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleLinkClick = (e) => {
-    // Logique pour rediriger vers différentes sections de la page
-    // Vous pouvez utiliser la navigation React Router ou toute autre méthode de navigation de votre choix
-  };
-
+const FloatingMenu = () => {
   return (
-    <div className="floating-menu">
-      <div className="menu-icon" onClick={toggleMenu}>
-        {/* Icône de votre choix pour représenter le menu */}
-      </div>
-      {isMenuOpen && (
-        <div className="menu-dropdown">
-          <ul>
-            <li> 
-              <div className="checkbox-wrapper-54">
-                <label className="switch">
-                  <input
-                    type="checkbox"
-                    onChange={onThemeChange} // Appel de la fonction de gestion du thème passée en tant que prop
-                  />
-                  <span className="slider"></span>
-                </label>
-              </div>
-            </li>
-            <li onClick={handleLinkClick}>Accueil</li>
-            <li onClick={handleLinkClick}>Services</li>
-            <li onClick={handleLinkClick}>À propos</li>
-            {/* Ajoutez d'autres liens pour les différentes sections de la page */}
-          </ul>
-        </div>
-      )}
+    <div className="menu">
+      <input type="checkbox" id="menu-toggle" />
+      <ul className="menu-items">
+      <li className="menu-item">
+          <ThemeSwitch />
+        </li>
+        <li className="menu-item">
+          <a href="#caesar-section"><img src={caesarIcon} alt="Caesar Icon" /></a>
+        </li>
+        <li className="menu-item">
+          <a href="#Vernam-section"><img src={vernamIcon} alt="Vernam Icon" /></a>
+        </li>
+        <li className="menu-item">
+          <a href="#Password-section"><img src={generatorIcon} alt="Generator Icon" /></a>
+        </li>
+      </ul>
     </div>
   );
 };

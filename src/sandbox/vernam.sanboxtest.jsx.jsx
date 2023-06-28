@@ -26,7 +26,7 @@ describe("VernamCipher", () => {
     fireEvent.click(encryptButton);
 
     // Check if the encrypted text is displayed
-    const encryptedText = getByLabelText("Résultat du chiffrement :").value;
+    const encryptedText = getByLabelText("Texte chiffré:").value;
     expect(encryptedText).toBe("Encrypted:p-1Encrypted:a-1Encrypted:s-1Encrypted:s-1Encrypted:w-1Encrypted:o-1Encrypted:r-1Encrypted:d-1");
 
     // Click decrypt button
@@ -34,7 +34,7 @@ describe("VernamCipher", () => {
     fireEvent.click(decryptButton);
 
     // Check if the decrypted text is displayed
-    const decryptedText = getByLabelText("Résultat du déchiffrement :");
+    const decryptedText = getByLabelText("Texte déchiffré:");
     expect(decryptedText).toHaveValue("Encrypted:p-1Encrypted:a-1Encrypted:s-1Encrypted:s-1Encrypted:w-1Encrypted:o-1Encrypted:r-1Encrypted:d-1");
   });
 });

@@ -70,7 +70,6 @@ const PasswordGenerator = () => {
   };
   return (
     <div>
-      <h3>Password Generator</h3>
       <div>
         <label htmlFor="passwordLength">Password Length:</label>
         <input
@@ -129,7 +128,7 @@ const PasswordGenerator = () => {
       </div>
       <button onClick={generatePassword}>Generate Password</button>
       {generatedPassword && (
-        <div id='generatedPassword'>
+        <div className='generatedPassword'>
           <h4>Generated Password:</h4>
           <h5>{generatedPassword}</h5>
         </div>

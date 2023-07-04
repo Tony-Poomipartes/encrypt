@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 
+
+
+
 const PasswordGenerator = () => {
   const [passwordLength, setPasswordLength] = useState(8);
   const [includeLowercase, setIncludeLowercase] = useState(true);
-  const [includeUppercase, setIncludeUppercase] = useState(false); // Checkbox cochée par défaut
+  const [includeUppercase, setIncludeUppercase] = useState(false);
   const [includeNumbers, setIncludeNumbers] = useState(false);
   const [includeSymbols, setIncludeSymbols] = useState(false);
   const [generatedPassword, setGeneratedPassword] = useState('');

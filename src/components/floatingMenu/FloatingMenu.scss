@@ -1,7 +1,7 @@
 .menu {
   position: absolute;
-  bottom: 20px;
-  right: 40px;
+  bottom: 25px;
+  right: 60px;
   z-index: 500;
   height: 50px;
   border-radius: 25px;
@@ -66,8 +66,8 @@
   a {
     font-size: 1.25em;
     font-weight: bold;
-    color: white;
     text-decoration: none;
+    filter: brightness(0%);
   }
 }
 

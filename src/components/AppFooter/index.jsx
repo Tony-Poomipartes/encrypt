@@ -1,4 +1,4 @@
-import "./footer.css"
+import "./footer.scss"
 import ansiiLogo from "/src/assets/web icons/anssi.png";
 
 function AppFooter() {

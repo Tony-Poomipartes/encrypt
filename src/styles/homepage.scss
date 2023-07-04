@@ -348,7 +348,6 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
       font-size: var(	--text-lg);
   }
   input.question, textarea.question {
-    width: auto;
     height: auto;
   }
 
@@ -415,7 +414,7 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
       flex-direction: column;
       align-items: center;
   }
-  .generatedPassword h5{
+  .generatedPassword h4{
     word-break: break-all;
 }
 }

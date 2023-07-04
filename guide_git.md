@@ -36,8 +36,6 @@ ou bien , plus en detail
 [git convention](https://www.conventionalcommits.org/en/v1.0.0/)/ [video](https://www.youtube.com/watch?v=AlHohDBBAMY&ab_channel=Grafikart.fr)
 ---
 
-<type>
-
 - 🧱 build: Système de build (example : gulp, webpack, npm)
 - ci: Intégration continue (example scopes: Travis, Circle, BrowserStack,
 SauceLabs)

@@ -5,12 +5,16 @@ import vernamIcon from "/var/www/html/spé React/S9/EP3/encrypt/src/assets/web i
 import generatorIcon from "/var/www/html/spé React/S9/EP3/encrypt/src/assets/web icons/generator.png";
 import caesarIcon from "/var/www/html/spé React/S9/EP3/encrypt/src/assets/web icons/caesar.png";
 
-const FloatingMenu = () => {
+/**
+ * Renders a floating menu component.
+ * @returns {JSX.Element} The rendered floating menu.
+ */
+const FloatingMenu: React.FC = () => {
   return (
     <div className="menu">
       <input type="checkbox" id="menu-toggle" />
       <ul className="menu-items">
-      <li className="menu-item">
+        <li className="menu-item">
           <ThemeSwitch />
         </li>
         <li className="menu-item">

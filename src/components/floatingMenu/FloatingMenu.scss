@@ -67,7 +67,7 @@
     font-size: 1.25em;
     font-weight: bold;
     text-decoration: none;
-    filter: brightness(0%);
+    filter: brightness(0%) invert(100%);
   }
 }
 

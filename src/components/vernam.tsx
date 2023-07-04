@@ -106,14 +106,14 @@ const VernamCipher: React.FC<VernamCipherProps> = () => {
       <button onClick={handleDecryptClick}>Déchiffrer</button>
       {state.encryptedText && (
         <div className="generatedPassword">
-          <h4>Texte chiffré:</h4>
-          <h5>{state.encryptedText}</h5>
+          <h3>Texte chiffré:</h3>
+          <h4>{state.encryptedText}</h4>
         </div>
       )}
       {state.decryptedText && (
         <div className="generatedPassword">
-          <h4>Texte déchiffré:</h4>
-          <h5>{state.decryptedText}</h5>
+          <h3>Texte déchiffré:</h3>
+          <h4>{state.decryptedText}</h4>
         </div>
       )}
     </div>

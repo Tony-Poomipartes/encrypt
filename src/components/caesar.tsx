@@ -88,16 +88,11 @@ function CaesarCipher(props: CaesarCipherProps): JSX.Element {
         <button type="submit">Chiffrer</button>
       </form>
       {encryptedPassword && (
-        <label htmlFor="encryptedText">Résultat du chiffrement :</label>
+      <div className='generatedPassword'>
+      <h3>Mot de passe chiffré:</h3>
+      <h4>{encryptedPassword}</h4>
+    </div>
       )}
-      <input
-        type="text"
-        id="encryptedText"
-        name="encrypted Password"
-        className="question"
-        value={encryptedPassword}
-        readOnly
-      />
     </div>
   );
 }

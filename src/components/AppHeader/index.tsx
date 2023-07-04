@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './header.scss';
 
-const AppHeader = () => {
+type AppHeaderProps = {};
 
-
+const AppHeader: React.FC<AppHeaderProps> = (): JSX.Element => {
   return (
     <div id="title">
       <h1>ENCRYPT</h1>
